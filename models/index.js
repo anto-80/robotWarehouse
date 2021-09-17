@@ -2,14 +2,14 @@ const {Sequelize, DataTypes, Model} = require('sequelize')
 const {sequelize} = require('../db')
 
 
-class Sauce extends Model {}
+class Robot extends Model {}
 
-Sauce.init({
+Robot.init({
     name: DataTypes.STRING,
-    image: DataTypes.STRING,
+    type: DataTypes.STRING,
 }, {
     sequelize,
     timestamps: false,
 });
 
-module.exports = {Sauce};
+module.exports = {Robot};

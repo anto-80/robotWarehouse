@@ -1,0 +1,7 @@
+{
+  "data": [
+      {"name" : "i19", "type" : "killing"},
+      {"name" : "i7", "type": "killing2"},
+      {"name" : "b13", "type": "killing3"}
+  ]  
+}

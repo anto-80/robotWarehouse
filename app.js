@@ -1,6 +1,6 @@
 const express = require('express');
 const {sequelize} = require('./db');
-const {Sauce} = require('./models');
+const {Robot} = require('./models');
 
 const seed = require('./seed')
 
@@ -21,14 +21,14 @@ app.use((req, res, next) => {
 
 seed();
 
-app.get('/sauces', async (req, res) => {
-    const sauces= await Sauce.findAll()
-    res.json({sauces})
+app.get('/robots', async (req, res) => {
+    const robots= await Robot.findAll()
+    res.json({robots})
 })
 
-app.get('/sauces/:id', async (req, res) => {
-    const sauce = await Sauce.findByPk(req.params.id)
-    res.json({sauce})
+app.get('/robots/:id', async (req, res) => {
+    const robot = await Robot.findByPk(req.params.id)
+    res.json({robot})
 })
 
 app.listen(PORT, () => {

@@ -30323,55 +30323,7 @@ try {
   }
 }
 
-},{}],"react/components/Item.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Item = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Item = function Item(props) {
-  console.log("PROPS IN ITEM ", props);
-  return /*#__PURE__*/_react.default.createElement("img", {
-    className: "item-img",
-    src: props.singleItem.image
-  });
-};
-
-exports.Item = Item;
-},{"react":"../node_modules/react/index.js"}],"react/components/ItemContainer.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.ItemContainer = void 0;
-
-var _react = _interopRequireWildcard(require("react"));
-
-var _Item = require("./Item");
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-var ItemContainer = function ItemContainer(props) {
-  console.log("PROPS IN ItemContainer ", props);
-  return /*#__PURE__*/_react.default.createElement("div", null, props.items.map(function (item, idx) {
-    return /*#__PURE__*/_react.default.createElement(_Item.Item, {
-      key: idx,
-      singleItem: item
-    });
-  }));
-};
-
-exports.ItemContainer = ItemContainer;
-},{"react":"../node_modules/react/index.js","./Item":"react/components/Item.js"}],"react/components/App.js":[function(require,module,exports) {
+},{}],"react/components/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30380,8 +30332,6 @@ Object.defineProperty(exports, "__esModule", {
 exports.App = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
-
-var _ItemContainer = require("./ItemContainer");
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -30404,23 +30354,19 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var App = function App() {
-  /*
-  1st arg = what is the state element called? (sauces)
-  2nd arg = what function will update the state? (setSauces)
-  	*/
   var _useState = (0, _react.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
-      sauces = _useState2[0],
-      setSauces = _useState2[1]; //what do we want our default state to be?
+      Robots = _useState2[0],
+      setRobots = _useState2[1]; //what do we want our default state to be?
 
 
-  function fetchSauces() {
-    return _fetchSauces.apply(this, arguments);
+  function fetchRobots() {
+    return _fetchRobots.apply(this, arguments);
   } //takes a callback function, where we put our fetch!
 
 
-  function _fetchSauces() {
-    _fetchSauces = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+  function _fetchRobots() {
+    _fetchRobots = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
       var response, responseJSON;
       return regeneratorRuntime.wrap(function _callee$(_context) {
         while (1) {
@@ -30428,7 +30374,7 @@ var App = function App() {
             case 0:
               _context.prev = 0;
               _context.next = 3;
-              return fetch('http://localhost:3000/sauces');
+              return fetch('http://localhost:3000/robots');
 
             case 3:
               response = _context.sent;
@@ -30438,7 +30384,7 @@ var App = function App() {
             case 6:
               responseJSON = _context.sent;
               console.log("WHAT IS OUR RES? ", responseJSON);
-              setSauces(responseJSON.sauces);
+              setRobots(responseJSON.Robots);
               _context.next = 14;
               break;
 
@@ -30454,15 +30400,15 @@ var App = function App() {
         }
       }, _callee, null, [[0, 11]]);
     }));
-    return _fetchSauces.apply(this, arguments);
+    return _fetchRobots.apply(this, arguments);
   }
 
   (0, _react.useEffect)(function () {
-    fetchSauces();
-  }, []); //pass an empty array to run just once!
+    fetchRobots();
+  }); //pass an empty array to run just once!
   //return everything in nested pair of tags
 
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null), /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
     class: "d-flex",
     id: "wrapper"
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -30493,33 +30439,8 @@ var App = function App() {
     href: "#",
     class: "list-group-item list-group-item-action bg-transparent second-text fw-bold"
   }, /*#__PURE__*/_react.default.createElement("i", {
-    class: "fas fa-paperclip me-2"
-  }), "Reports"), /*#__PURE__*/_react.default.createElement("a", {
-    href: "#",
-    class: "list-group-item list-group-item-action bg-transparent second-text fw-bold"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    class: "fas fa-shopping-cart me-2"
-  }), "Store Mng"), /*#__PURE__*/_react.default.createElement("a", {
-    href: "#",
-    class: "list-group-item list-group-item-action bg-transparent second-text fw-bold"
-  }, /*#__PURE__*/_react.default.createElement("i", {
     class: "fas fa-gift me-2"
-  }), "Robots"), /*#__PURE__*/_react.default.createElement("a", {
-    href: "#",
-    class: "list-group-item list-group-item-action bg-transparent second-text fw-bold"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    class: "fas fa-comment-dots me-2"
-  }), "Chat"), /*#__PURE__*/_react.default.createElement("a", {
-    href: "#",
-    class: "list-group-item list-group-item-action bg-transparent second-text fw-bold"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    class: "fas fa-map-marker-alt me-2"
-  }), "Outlet"), /*#__PURE__*/_react.default.createElement("a", {
-    href: "#",
-    class: "list-group-item list-group-item-action bg-transparent text-danger fw-bold"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    class: "fas fa-power-off me-2"
-  }), "Logout"))), /*#__PURE__*/_react.default.createElement("div", {
+  }), "Robots"))), /*#__PURE__*/_react.default.createElement("div", {
     id: "page-content-wrapper"
   }, /*#__PURE__*/_react.default.createElement("nav", {
     class: "navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4"
@@ -30540,35 +30461,7 @@ var App = function App() {
     "aria-label": "Toggle navigation"
   }, /*#__PURE__*/_react.default.createElement("span", {
     class: "navbar-toggler-icon"
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    class: "collapse navbar-collapse",
-    id: "navbarSupportedContent"
-  }, /*#__PURE__*/_react.default.createElement("ul", {
-    class: "navbar-nav ms-auto mb-2 mb-lg-0"
-  }, /*#__PURE__*/_react.default.createElement("li", {
-    class: "nav-item dropdown"
-  }, /*#__PURE__*/_react.default.createElement("a", {
-    class: "nav-link dropdown-toggle second-text fw-bold",
-    href: "#",
-    id: "navbarDropdown",
-    role: "button",
-    "data-bs-toggle": "dropdown",
-    "aria-expanded": "false"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    class: "fas fa-user me-2"
-  }), "John Doe"), /*#__PURE__*/_react.default.createElement("ul", {
-    class: "dropdown-menu",
-    "aria-labelledby": "navbarDropdown"
-  }, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
-    class: "dropdown-item",
-    href: "#"
-  }, "Profile")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
-    class: "dropdown-item",
-    href: "#"
-  }, "Settings")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement("a", {
-    class: "dropdown-item",
-    href: "#"
-  }, "Logout"))))))), /*#__PURE__*/_react.default.createElement("div", {
+  }))), /*#__PURE__*/_react.default.createElement("div", {
     class: "container-fluid px-4"
   }, /*#__PURE__*/_react.default.createElement("div", {
     class: "row g-3 my-2"
@@ -30657,7 +30550,7 @@ var App = function App() {
 };
 
 exports.App = App;
-},{"react":"../node_modules/react/index.js","./ItemContainer":"react/components/ItemContainer.js"}],"react/index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"react/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -30701,7 +30594,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54090" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59576" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
