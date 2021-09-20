@@ -1,0 +1,9 @@
+[{
+    "name": "killers",
+    "size": 20001,
+    "location":"NY",
+    "assigneds": [{
+            "startDate": "1/1/2021",
+            "endDate": "1/10/2021"
+        }]
+  }]
