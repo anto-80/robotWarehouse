@@ -30323,9 +30323,6 @@ try {
   }
 }
 
-<<<<<<< HEAD
-},{}],"react/components/Sidebar.js":[function(require,module,exports) {
-=======
 },{}],"../node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js":[function(require,module,exports) {
 "use strict";
 
@@ -34431,31 +34428,18 @@ if ("development" !== "production") {
   });
 }
 },{"react-router":"../node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"../node_modules/react/index.js","history":"../node_modules/history/esm/history.js","prop-types":"../node_modules/prop-types/index.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"react/components/Sidebar.js":[function(require,module,exports) {
->>>>>>> aba55f0cfd2170d85cd0de5c24fc04590fc62773
 "use strict";
 
 var _react = _interopRequireWildcard(require("react"));
 
-<<<<<<< HEAD
-=======
 var _reactRouterDom = require("react-router-dom");
 
->>>>>>> aba55f0cfd2170d85cd0de5c24fc04590fc62773
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var Sidebar = function Sidebar(props) {
-<<<<<<< HEAD
-  function handleClick(e) {
-    e.preventDefault();
-    console.log('clicked');
-  }
-
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
-=======
   return /*#__PURE__*/_react.default.createElement("div", {
->>>>>>> aba55f0cfd2170d85cd0de5c24fc04590fc62773
     className: "bg-white",
     id: "sidebar-wrapper"
   }, /*#__PURE__*/_react.default.createElement("div", {
@@ -34464,36 +34448,6 @@ var Sidebar = function Sidebar(props) {
     className: "fas fa-robot"
   }), " Houston Dynamics"), /*#__PURE__*/_react.default.createElement("div", {
     className: "list-group list-group-flush my-3"
-<<<<<<< HEAD
-  }, /*#__PURE__*/_react.default.createElement("a", {
-    href: "#",
-    onClick: handleClick,
-    className: "list-group-item list-group-item-action bg-transparent second-text active"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "fas fa-tachometer-alt me-2"
-  }), "Dashboard"), /*#__PURE__*/_react.default.createElement("a", {
-    href: "#",
-    onClick: handleClick,
-    className: "list-group-item list-group-item-action bg-transparent second-text fw-bold"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "fas fa-warehouse"
-  }), " Warehouses"), /*#__PURE__*/_react.default.createElement("a", {
-    href: "#",
-    onClick: handleClick,
-    className: "list-group-item list-group-item-action bg-transparent second-text fw-bold"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "fas fa-chart-line me-2"
-  }), "Analytics"), /*#__PURE__*/_react.default.createElement("a", {
-    href: "#",
-    onClick: handleClick,
-    className: "list-group-item list-group-item-action bg-transparent second-text fw-bold"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "fas fa-gift me-2"
-  }), "Robots"))));
-};
-
-module.exports = Sidebar;
-=======
   }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/",
     className: "list-group-item list-group-item-action bg-transparent second-text fw-bold"
@@ -34518,7 +34472,7 @@ module.exports = Sidebar;
 };
 
 module.exports = Sidebar;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"react/components/title.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"react/components/Title.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireWildcard(require("react"));
@@ -34553,7 +34507,37 @@ var Title = function Title(props) {
 };
 
 module.exports = Title;
->>>>>>> aba55f0cfd2170d85cd0de5c24fc04590fc62773
+},{"react":"../node_modules/react/index.js"}],"react/components/Robots.js":[function(require,module,exports) {
+"use strict";
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var Robots = function Robots(props) {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("table", {
+    class: "table bg-white rounded shadow-sm  table-hover"
+  }, /*#__PURE__*/_react.default.createElement("thead", null, /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", {
+    scope: "col",
+    width: "50"
+  }, "#"), /*#__PURE__*/_react.default.createElement("th", {
+    scope: "col"
+  }, "Robot Name"), /*#__PURE__*/_react.default.createElement("th", {
+    scope: "col"
+  }, "Type"), /*#__PURE__*/_react.default.createElement("th", {
+    scope: "col"
+  }, "Assigned"))), props.robots.map(function (robot, i) {
+    return /*#__PURE__*/_react.default.createElement("tbody", null, /*#__PURE__*/_react.default.createElement("tr", {
+      key: i
+    }, /*#__PURE__*/_react.default.createElement("th", {
+      scope: "row"
+    }, robot.id), /*#__PURE__*/_react.default.createElement("td", null, robot.name), /*#__PURE__*/_react.default.createElement("td", null, robot.type), /*#__PURE__*/_react.default.createElement("td", null, robot.assigneds)));
+  })));
+};
+
+module.exports = Robots;
 },{"react":"../node_modules/react/index.js"}],"react/components/App.js":[function(require,module,exports) {
 "use strict";
 
@@ -34564,17 +34548,14 @@ exports.App = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-<<<<<<< HEAD
-var _Sidebar = _interopRequireDefault(require("./Sidebar"));
-
-=======
 var _reactRouterDom = require("react-router-dom");
 
 var _Sidebar = _interopRequireDefault(require("./Sidebar"));
 
-var _title = _interopRequireDefault(require("./title"));
+var _Title = _interopRequireDefault(require("./Title"));
 
->>>>>>> aba55f0cfd2170d85cd0de5c24fc04590fc62773
+var _Robots = _interopRequireDefault(require("./Robots"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -34600,7 +34581,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var App = function App() {
   var _useState = (0, _react.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
-      Robots = _useState2[0],
+      robots = _useState2[0],
       setRobots = _useState2[1]; //what do we want our default state to be?
 
 
@@ -34637,7 +34618,7 @@ var App = function App() {
             case 6:
               responseJSON = _context.sent;
               console.log("WHAT IS OUR RES? ", responseJSON);
-              setRobots(responseJSON.Robots);
+              setRobots(responseJSON.robots);
               _context.next = 14;
               break;
 
@@ -34751,11 +34732,7 @@ var App = function App() {
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
     class: "d-flex",
     id: "wrapper"
-<<<<<<< HEAD
-  }, /*#__PURE__*/_react.default.createElement(_Sidebar.default, null)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
-=======
   }, /*#__PURE__*/_react.default.createElement(_Sidebar.default, null), /*#__PURE__*/_react.default.createElement("div", {
->>>>>>> aba55f0cfd2170d85cd0de5c24fc04590fc62773
     id: "page-content-wrapper"
   }, /*#__PURE__*/_react.default.createElement("nav", {
     class: "navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4"
@@ -34764,7 +34741,7 @@ var App = function App() {
   }, /*#__PURE__*/_react.default.createElement("i", {
     class: "fas fa-align-left primary-text fs-4 me-3",
     id: "menu-toggle"
-  }), /*#__PURE__*/_react.default.createElement(_title.default, null)), /*#__PURE__*/_react.default.createElement("button", {
+  }), /*#__PURE__*/_react.default.createElement(_Title.default, null)), /*#__PURE__*/_react.default.createElement("button", {
     class: "navbar-toggler",
     type: "button",
     "data-bs-toggle": "collapse",
@@ -34825,53 +34802,18 @@ var App = function App() {
   }, "Recent Orders"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/warehouses"
   }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    path: "/warehouses"
+    path: "/robots"
   }, /*#__PURE__*/_react.default.createElement("div", {
     class: "col"
-  }, /*#__PURE__*/_react.default.createElement("table", {
-    class: "table bg-white rounded shadow-sm  table-hover"
-  }, /*#__PURE__*/_react.default.createElement("thead", null, /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", {
-    scope: "col",
-    width: "50"
-  }, "#"), /*#__PURE__*/_react.default.createElement("th", {
-    scope: "col"
-  }, "Robot Name"), /*#__PURE__*/_react.default.createElement("th", {
-    scope: "col"
-  }, "Assigned company"), /*#__PURE__*/_react.default.createElement("th", {
-    scope: "col"
-  }, "Type of Robot"))), /*#__PURE__*/_react.default.createElement("tbody", null, /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", {
-    scope: "row"
-  }, "1"), /*#__PURE__*/_react.default.createElement("td", null, "T800"), /*#__PURE__*/_react.default.createElement("td", null, "Skynet"), /*#__PURE__*/_react.default.createElement("td", null, "Terminator")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", {
-    scope: "row"
-  }, "2"), /*#__PURE__*/_react.default.createElement("td", null, "R2D2"), /*#__PURE__*/_react.default.createElement("td", null, "Star Wars"), /*#__PURE__*/_react.default.createElement("td", null, "sidekick")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", {
-    scope: "row"
-  }, "3"), /*#__PURE__*/_react.default.createElement("td", null, "Star scream"), /*#__PURE__*/_react.default.createElement("td", null, "Decepticons"), /*#__PURE__*/_react.default.createElement("td", null, "F35 combat aircraft")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", {
-    scope: "row"
-  }, "4"), /*#__PURE__*/_react.default.createElement("td", null, "w1206"), /*#__PURE__*/_react.default.createElement("td", null, "GM"), /*#__PURE__*/_react.default.createElement("td", null, "Welder")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", {
-    scope: "row"
-  }, "5"), /*#__PURE__*/_react.default.createElement("td", null, "p456"), /*#__PURE__*/_react.default.createElement("td", null, "Sherwin Williams"), /*#__PURE__*/_react.default.createElement("td", null, "Color Mixer")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", {
-    scope: "row"
-  }, "6"), /*#__PURE__*/_react.default.createElement("td", null, "A675"), /*#__PURE__*/_react.default.createElement("td", null, "Toyota"), /*#__PURE__*/_react.default.createElement("td", null, "Assembly")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", {
-    scope: "row"
-  }, "7"), /*#__PURE__*/_react.default.createElement("td", null, "X768"), /*#__PURE__*/_react.default.createElement("td", null, "Amazon"), /*#__PURE__*/_react.default.createElement("td", null, "Packing/Palletizing")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", {
-    scope: "row"
-  }, "8"), /*#__PURE__*/_react.default.createElement("td", null, "Data"), /*#__PURE__*/_react.default.createElement("td", null, "Starship USS Enterprise"), /*#__PURE__*/_react.default.createElement("td", null, "Intelligence analyst")), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", {
-    scope: "row"
-  }, "9"), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null)), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", {
-    scope: "row"
-  }, "10"), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null)), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", {
-    scope: "row"
-  }, "11"), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null)), /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", {
-    scope: "row"
-  }, "12"), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null), /*#__PURE__*/_react.default.createElement("td", null)))))))))));
+  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    path: "/robots"
+  }, /*#__PURE__*/_react.default.createElement(_Robots.default, {
+    robots: robots
+  })))))))));
 };
 
 exports.App = App;
-<<<<<<< HEAD
-},{"react":"../node_modules/react/index.js","./Sidebar":"react/components/Sidebar.js"}],"react/index.js":[function(require,module,exports) {
-=======
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./Sidebar":"react/components/Sidebar.js","./title":"react/components/title.js"}],"react/index.js":[function(require,module,exports) {
->>>>>>> aba55f0cfd2170d85cd0de5c24fc04590fc62773
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./Sidebar":"react/components/Sidebar.js","./Title":"react/components/Title.js","./Robots":"react/components/Robots.js"}],"react/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -34916,15 +34858,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-<<<<<<< HEAD
-<<<<<<< HEAD
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50234" + '/');
-=======
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60614" + '/');
->>>>>>> aba55f0cfd2170d85cd0de5c24fc04590fc62773
-=======
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58289" + '/');
->>>>>>> dad8ea41e99422da0f708891b3263f0a3dd72b82
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49280" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

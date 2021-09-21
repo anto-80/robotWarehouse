@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import {Link , Route} from 'react-router-dom';
 import Sidebar from './Sidebar';
-import Title from './title';
+import Title from './Title';
+import Robots from './Robots';
 
 
 
 
 export const App = () => {
 	
-	const [Robots, setRobots]  = useState([]) //what do we want our default state to be?
+	const [robots, setRobots]  = useState([]) //what do we want our default state to be?
     const [Warehouses, setWarehouses]  = useState([]) 
     const [Assigneds, setAssigneds]  = useState([]) 
 	async function fetchRobots() {
@@ -18,7 +19,7 @@ export const App = () => {
 
   			console.log("WHAT IS OUR RES? ", responseJSON);	
 
-  			setRobots(responseJSON.Robots)
+  			setRobots(responseJSON.robots)
   		} catch(err) {
   			console.log("OH NO AN ERROR! ", err)
   		}
@@ -143,10 +144,13 @@ export const App = () => {
                             </Route>
                             
 			
-			 <Route path="/warehouses">
+			 <Route path="/robots">
     
 				  <div class="col">
-                                <table class="table bg-white rounded shadow-sm  table-hover">
+                  <Route path="/robots">
+				     <Robots robots={robots} />
+			      </Route> 
+                                {/* <table class="table bg-white rounded shadow-sm  table-hover">
                                     <thead>
                                         <tr>
                                             <th scope="col" width="50">#</th>
@@ -229,7 +233,7 @@ export const App = () => {
                                             <td></td>
                                         </tr>
                                     </tbody>
-                                </table>
+                                </table> */}
                             </div> 
 			</Route>
 			 
