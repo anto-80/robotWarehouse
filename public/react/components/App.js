@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import {Link , Route} from 'react-router-dom';
 import Sidebar from './Sidebar';
+import Title from './title';
+
 
 
 
 export const App = () => {
 	
 	const [Robots, setRobots]  = useState([]) //what do we want our default state to be?
-
+    const [Warehouses, setWarehouses]  = useState([]) 
+    const [Assigneds, setAssigneds]  = useState([]) 
 	async function fetchRobots() {
   		try {
   			const response = await fetch('http://localhost:3000/robots');
@@ -18,13 +22,40 @@ export const App = () => {
   		} catch(err) {
   			console.log("OH NO AN ERROR! ", err)
   		}
-  	} 
+      } 
+      async function fetchWarehouses() {
+        try {
+            const response = await fetch('http://localhost:3000/warehouses');
+            const responseJSON = await response.json()
+
+            console.log("WHAT IS OUR RES? ", responseJSON);	
+
+            setWarehouses(responseJSON.Warehouses)
+        } catch(err) {
+            console.log("OH NO AN ERROR! ", err)
+        }
+    } 
+    async function fetchAssigneds() {
+        try {
+            const response = await fetch('http://localhost:3000/assigneds');
+            const responseJSON = await response.json()
+
+            console.log("WHAT IS OUR RES? ", responseJSON);	
+
+            setAssigneds(responseJSON.Assigneds)
+        } catch(err) {
+            console.log("OH NO AN ERROR! ", err)
+        }
+    } 
   
 	//takes a callback function, where we put our fetch!
   	useEffect(() => {
-  		fetchRobots()
-  	}) //pass an empty array to run just once!
-	//return everything in nested pair of tags
+          fetchRobots();
+          fetchWarehouses();
+          fetchAssigneds();
+  	}),([]); //pass an empty array to run just once!
+    //return everything in nested pair of tags
+    
 	return(
 
 
@@ -38,15 +69,15 @@ export const App = () => {
 			<div class="d-flex" id="wrapper">
                 
                <Sidebar />
-                </div>
                
+             
         
                
                 <div id="page-content-wrapper">
                     <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                         <div class="d-flex align-items-center">
                             <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
-                            <h2 class="fs-2 m-0">Dashboard</h2>
+                            <Title/>
                         </div>
         
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -104,7 +135,15 @@ export const App = () => {
         
                         <div class="row my-5">
                             <h3 class="fs-4 mb-3">Recent Orders</h3>
-                            <div class="col">
+
+                            
+                            <Route path="/warehouses">
+                            </Route>
+                            
+			
+			 <Route path="/warehouses">
+    
+				  <div class="col">
                                 <table class="table bg-white rounded shadow-sm  table-hover">
                                     <thead>
                                         <tr>
@@ -189,11 +228,15 @@ export const App = () => {
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
+                            </div> 
+			</Route>
+			 
+                           
                         </div>
         
                     </div>
                 </div>
+            </div>
             </div>
 
             
