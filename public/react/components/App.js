@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Sidebar from './Sidebar';
 
 
 
@@ -31,30 +32,19 @@ export const App = () => {
 		<div>
 			
 					
-				
+
+            	
 				
 
 			<div class="d-flex" id="wrapper">
-                
-                <div class="bg-white" id="sidebar-wrapper">
-                    <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i
-                            class="fas fa-robot"></i> Houston Dynamics</div>
-                    <div class="list-group list-group-flush my-3">
-                        <a href="#" class="list-group-item list-group-item-action bg-transparent second-text active"><i
-                                class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
-                        <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
-                                class="fas fa-warehouse"></i> Warehouses</a>
-                        <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
-                                class="fas fa-chart-line me-2"></i>Analytics</a>
-                        <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
-                                class="fas fa-gift me-2"></i>Robots</a>
-                        
-                    </div>
+                <Sidebar />
+               
                 </div>
                
-        
+            <div>
                
                 <div id="page-content-wrapper">
+                  
                     <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                         <div class="d-flex align-items-center">
                             <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
@@ -207,8 +197,7 @@ export const App = () => {
                     </div>
                 </div>
             </div>
-
-            </div>
-		
+       </div>
+         	
 	)
 }

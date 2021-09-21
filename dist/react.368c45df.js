@@ -30323,7 +30323,59 @@ try {
   }
 }
 
-},{}],"react/components/App.js":[function(require,module,exports) {
+},{}],"react/components/Sidebar.js":[function(require,module,exports) {
+"use strict";
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var Sidebar = function Sidebar(props) {
+  function handleClick(e) {
+    e.preventDefault();
+    console.log('clicked');
+  }
+
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "bg-white",
+    id: "sidebar-wrapper"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "fas fa-robot"
+  }), " Houston Dynamics"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "list-group list-group-flush my-3"
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    href: "#",
+    onClick: handleClick,
+    className: "list-group-item list-group-item-action bg-transparent second-text active"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "fas fa-tachometer-alt me-2"
+  }), "Dashboard"), /*#__PURE__*/_react.default.createElement("a", {
+    href: "#",
+    onClick: handleClick,
+    className: "list-group-item list-group-item-action bg-transparent second-text fw-bold"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "fas fa-warehouse"
+  }), " Warehouses"), /*#__PURE__*/_react.default.createElement("a", {
+    href: "#",
+    onClick: handleClick,
+    className: "list-group-item list-group-item-action bg-transparent second-text fw-bold"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "fas fa-chart-line me-2"
+  }), "Analytics"), /*#__PURE__*/_react.default.createElement("a", {
+    href: "#",
+    onClick: handleClick,
+    className: "list-group-item list-group-item-action bg-transparent second-text fw-bold"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "fas fa-gift me-2"
+  }), "Robots"))));
+};
+
+module.exports = Sidebar;
+},{"react":"../node_modules/react/index.js"}],"react/components/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30332,6 +30384,10 @@ Object.defineProperty(exports, "__esModule", {
 exports.App = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
+
+var _Sidebar = _interopRequireDefault(require("./Sidebar"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
@@ -30411,36 +30467,7 @@ var App = function App() {
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
     class: "d-flex",
     id: "wrapper"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    class: "bg-white",
-    id: "sidebar-wrapper"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    class: "sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    class: "fas fa-robot"
-  }), " Houston Dynamics"), /*#__PURE__*/_react.default.createElement("div", {
-    class: "list-group list-group-flush my-3"
-  }, /*#__PURE__*/_react.default.createElement("a", {
-    href: "#",
-    class: "list-group-item list-group-item-action bg-transparent second-text active"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    class: "fas fa-tachometer-alt me-2"
-  }), "Dashboard"), /*#__PURE__*/_react.default.createElement("a", {
-    href: "#",
-    class: "list-group-item list-group-item-action bg-transparent second-text fw-bold"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    class: "fas fa-warehouse"
-  }), " Warehouses"), /*#__PURE__*/_react.default.createElement("a", {
-    href: "#",
-    class: "list-group-item list-group-item-action bg-transparent second-text fw-bold"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    class: "fas fa-chart-line me-2"
-  }), "Analytics"), /*#__PURE__*/_react.default.createElement("a", {
-    href: "#",
-    class: "list-group-item list-group-item-action bg-transparent second-text fw-bold"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    class: "fas fa-gift me-2"
-  }), "Robots"))), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement(_Sidebar.default, null)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
     id: "page-content-wrapper"
   }, /*#__PURE__*/_react.default.createElement("nav", {
     class: "navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4"
@@ -30550,7 +30577,7 @@ var App = function App() {
 };
 
 exports.App = App;
-},{"react":"../node_modules/react/index.js"}],"react/index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Sidebar":"react/components/Sidebar.js"}],"react/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -30594,7 +30621,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59576" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50234" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
