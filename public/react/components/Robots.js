@@ -6,8 +6,10 @@ const Robots = (props) => {
 
     return (
        <div>
+           <h2>All Robots:</h2>
             <table class="table bg-white rounded shadow-sm  table-hover">
             <thead>
+                
                                         <tr>
                                             <th scope="col" width="50">#</th>
                                             <th scope="col">Robot Name</th>
