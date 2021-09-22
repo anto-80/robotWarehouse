@@ -1,63 +1,42 @@
 [{
-    "name": "Killers",
+    "name": "Sears",
     "size": 20001,
-    "location":"New York",
-    "assigneds": [{
-            "startDate": "1/1/2021",
-            "endDate": "2/1/2021"
-        }]
+    "location":"New York"
+    
   },
   {
     "name": "Diesel",
     "size": 30001,
-    "location":"Pennsylvania",
-    "assigneds": [{
-            "startDate": "2/1/2021",
-            "endDate": "3/10/2021"
-        }]
+    "location":"Pennsylvania"
+    
   },
   {
     "name": "Star Wars",
     "size": 40001,
-    "location":"North Dakota",
-    "assigneds": [{
-            "startDate": "3/1/2021",
-            "endDate": "4/1/2021"
-        }]
+    "location":"North Dakota"
+    
   },
   {
     "name": "Toyota",
     "size": 50001,
-    "location":"Wisconsin",
-    "assigneds": [{
-            "startDate": "4/1/2021",
-            "endDate": "5/1/2021"
-        }]
+    "location":"Wisconsin"
+   
   },
   {
     "name": "Blue Bonnet",
     "size": 60001,
-    "location":"Arkansas",
-    "assigneds": [{
-            "startDate": "5/1/2021",
-            "endDate": "6/1/2021"
-        }]
+    "location":"Arkansas"
+   
   },
   {
     "name": "GM",
     "size": 70001,
-    "location":"Utah",
-    "assigneds": [{
-            "startDate": "6/1/2021",
-            "endDate": "7/1/2021"
-        }]
+    "location":"Utah"
+   
   },
   {
     "name": "Third Precinct",
     "size": 80001,
-    "location":"California",
-    "assigneds": [{
-            "startDate": "7/1/2021",
-            "endDate": "8/1/2021"
-        }]
+    "location":"California"
+    
   }]

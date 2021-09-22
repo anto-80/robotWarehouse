@@ -14,7 +14,7 @@ const Robots = (props) => {
                                             <th scope="col" width="50">#</th>
                                             <th scope="col">Robot Name</th>
                                             <th scope="col">Type</th>
-                                            <th scope="col">Assigned</th>
+                                            
                                         </tr>
                                     </thead>
 			{
@@ -25,7 +25,7 @@ const Robots = (props) => {
                 <th scope="row">{robot.id}</th>
                 <td>{robot.name}</td>
                 <td>{robot.type}</td>
-                <td>{robot.assigneds}</td>
+    
             </tr>
         </tbody>)
         })
