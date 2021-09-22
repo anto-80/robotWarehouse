@@ -12,7 +12,7 @@ export const App = () => {
 	
 	const [robots, setRobots]  = useState([]) //what do we want our default state to be?
     const [warehouses, setWarehouses]  = useState([]) 
-    const [Assigneds, setAssigneds]  = useState([]) 
+    const [assigneds, setAssigneds]  = useState([]) 
 	async function fetchRobots() {
   		try {
   			const response = await fetch('http://localhost:3000/robots');
@@ -44,7 +44,7 @@ export const App = () => {
 
             console.log("WHAT IS OUR RES? ", responseJSON);	
 
-            setAssigneds(responseJSON.Assigneds)
+            setAssigneds(responseJSON.assigneds)
         } catch(err) {
             console.log("OH NO AN ERROR! ", err)
         }
@@ -55,7 +55,7 @@ export const App = () => {
           fetchRobots();
           fetchWarehouses();
           fetchAssigneds();
-  	}),([]); //pass an empty array to run just once!
+  	},[]); //pass an empty array to run just once!
     //return everything in nested pair of tags
     
 	return(
@@ -112,7 +112,7 @@ export const App = () => {
                             <div class="col-md-4">
                                 <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                                     <div>
-                                        <h3 class="fs-2">9</h3>
+                                        <h3 class="fs-2">{robots.length}</h3>
                                         <p class="fs-5">Robots</p>
                                     </div>
                                     <i class="fas fa-robot fs-1 primary-text border rounded-full secondary-bg p-3"></i>
@@ -122,7 +122,7 @@ export const App = () => {
                             <div class="col-md-4">
                                 <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                                     <div>
-                                        <h3 class="fs-2">40</h3>
+                                        <h3 class="fs-2">{assigneds.length}</h3>
                                         <p class="fs-5">Assigned</p>
                                     </div>
                                     <i
@@ -133,7 +133,7 @@ export const App = () => {
                             <div class="col-md-4">
                                 <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                                     <div>
-                                        <h3 class="fs-2">7</h3>
+                                        <h3 class="fs-2">{warehouses.length}</h3>
                                         <p class="fs-5">Warehouses</p>
                                     </div>
                                     <i class="fas fa-warehouse fs-1 primary-text border rounded-full secondary-bg p-3"></i>
