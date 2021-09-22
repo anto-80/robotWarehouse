@@ -3,6 +3,7 @@ import {Link , Route} from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Title from './Title';
 import Robots from './Robots';
+import Warehouses from './Warehouses';
 
 
 
@@ -10,7 +11,7 @@ import Robots from './Robots';
 export const App = () => {
 	
 	const [robots, setRobots]  = useState([]) //what do we want our default state to be?
-    const [Warehouses, setWarehouses]  = useState([]) 
+    const [warehouses, setWarehouses]  = useState([]) 
     const [Assigneds, setAssigneds]  = useState([]) 
 	async function fetchRobots() {
   		try {
@@ -31,7 +32,7 @@ export const App = () => {
 
             console.log("WHAT IS OUR RES? ", responseJSON);	
 
-            setWarehouses(responseJSON.Warehouses)
+            setWarehouses(responseJSON.warehouses)
         } catch(err) {
             console.log("OH NO AN ERROR! ", err)
         }
@@ -76,8 +77,22 @@ export const App = () => {
         
                
                 <div id="page-content-wrapper">
+
+                    <div class="collapse" id="navbarToggleExternalContent">
+                        <div class="bg-dark p-4">
+                            <h5 class="text-white h4">Collapsed content</h5>
+                            <span class="text-muted">Toggleable via the navbar brand.</span>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-dark bg-dark">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                    </nav>
                   
-                    <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+                    {/* <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                         <div class="d-flex align-items-center">
                             <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
                             <Title/>
@@ -90,152 +105,63 @@ export const App = () => {
                         </button>
         
                        
-                    </nav>
+                    </nav> */}
         
                     <div class="container-fluid px-4">
                         <div class="row g-3 my-2">
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                                     <div>
-                                        <h3 class="fs-2">50</h3>
+                                        <h3 class="fs-2">9</h3>
                                         <p class="fs-5">Robots</p>
                                     </div>
                                     <i class="fas fa-robot fs-1 primary-text border rounded-full secondary-bg p-3"></i>
                                 </div>
                             </div>
         
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                                     <div>
                                         <h3 class="fs-2">40</h3>
                                         <p class="fs-5">Assigned</p>
                                     </div>
                                     <i
-                                        class="fas fa-truck fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                                        class="fas fa-tasks fs-1 primary-text border rounded-full secondary-bg p-3"></i>
                                 </div>
                             </div>
         
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                                     <div>
-                                        <h3 class="fs-2">30</h3>
+                                        <h3 class="fs-2">7</h3>
                                         <p class="fs-5">Warehouses</p>
                                     </div>
                                     <i class="fas fa-warehouse fs-1 primary-text border rounded-full secondary-bg p-3"></i>
                                 </div>
                             </div>
         
-                            <div class="col-md-3">
-                                <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
-                                    <div>
-                                        <h3 class="fs-2">%25</h3>
-                                        <p class="fs-5">Increase</p>
-                                    </div>
-                                    <i class="fas fa-chart-line fs-1 primary-text border rounded-full secondary-bg p-3"></i>
-                                </div>
-                            </div>
+                            
                         </div>
         
                         <div class="row my-5">
-                            <h3 class="fs-4 mb-3">Recent Orders</h3>
+                            <h3 class="fs-4 mb-3"></h3>
 
                             
-                            <Route path="/warehouses">
-                            </Route>
                             
 			
-			 <Route path="/robots">
+			 
     
 				  <div class="col">
                   <Route path="/robots">
 				     <Robots robots={robots} />
 			      </Route> 
-                                {/* <table class="table bg-white rounded shadow-sm  table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col" width="50">#</th>
-                                            <th scope="col">Robot Name</th>
-                                            <th scope="col">Assigned company</th>
-                                            <th scope="col">Type of Robot</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>T800</td>
-                                            <td>Skynet</td>
-                                            <td>Terminator</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>R2D2</td>
-                                            <td>Star Wars</td>
-                                            <td>sidekick</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Star scream</td>
-                                            <td>Decepticons</td>
-                                            <td>F35 combat aircraft</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>w1206</td>
-                                            <td>GM</td>
-                                            <td>Welder</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">5</th>
-                                            <td>p456</td>
-                                            <td>Sherwin Williams</td>
-                                            <td>Color Mixer</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">6</th>
-                                            <td>A675</td>
-                                            <td>Toyota</td>
-                                            <td>Assembly</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">7</th>
-                                            <td>X768</td>
-                                            <td>Amazon</td>
-                                            <td>Packing/Palletizing</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">8</th>
-                                            <td>Data</td>
-                                            <td>Starship USS Enterprise</td>
-                                            <td>Intelligence analyst</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">9</th>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">10</th>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">11</th>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">12</th>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                    </tbody>
-                                </table> */}
+                  <Route path="/warehouses">
+                     <Warehouses warehouses={warehouses} />
+                  </Route>
+                            
+                               
                             </div> 
-			</Route>
+		
 			 
                            
                         </div>

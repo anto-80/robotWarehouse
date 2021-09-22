@@ -22,11 +22,11 @@ import {Link} from 'react-router-dom';
           </Link>
 
           <Link to="/robots"  className="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-        <i className="fas fa-chart-line me-2" /> Robots
+        <i className="fas fa-robot" /> Robots
         </Link>
 
         <Link to="/analytics" className="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-        <i className="fas fa-gift me-2" />Analytics
+        <i className="fas fa-tasks" />Assigned
         </Link>
     </div>
   </div>
