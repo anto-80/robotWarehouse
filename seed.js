@@ -28,13 +28,11 @@ const seed = async () => {
     const warehouses = JSON.parse(String(buffer2)); //parses data
 
     for (const warehouseData of warehouses) {
-        const warehouse = await Warehouse.create(warehouseData);
-        for (const assignedData of warehouseData.assigneds) {
-            const assigned = await Assigned.create(assignedData);
-            await warehouse.addAssigned(assigned);
+          await Warehouse.create(warehouseData);
+        
             console.log("popped2");
         }
-    }
+    
 }
 
 
