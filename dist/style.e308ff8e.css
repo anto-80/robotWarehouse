@@ -119,6 +119,21 @@ h1 {
   #wrapper.toggled #sidebar-wrapper {
     margin-left: -15rem;
   }
+
+
+  @media (min-width: 457px) {
+    #sidebar-wrapper {
+      margin-left: 0;
+    }
+  
+    #page-content-wrapper {
+      min-width: 0;
+      width: 100%;
+    }
+  
+    #wrapper.toggled #sidebar-wrapper {
+      margin-left: -10 rem;
+    }
 }
 
 

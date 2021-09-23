@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Robots component renders Robots component as expected 1`] = `
+<div>
+  <h2>
+    All Robots:
+  </h2>
+  <table
+    class="table bg-white rounded shadow-sm  table-hover"
+  >
+    <thead>
+      <tr>
+        <th
+          scope="col"
+          width="50"
+        >
+          #
+        </th>
+        <th
+          scope="col"
+        >
+          Robot Name
+        </th>
+        <th
+          scope="col"
+        >
+          Type
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th
+          scope="row"
+        />
+        <td />
+        <td />
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+        <th
+          scope="row"
+        />
+        <td />
+        <td />
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
