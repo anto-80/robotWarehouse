@@ -34464,50 +34464,20 @@ var Sidebar = function Sidebar(props) {
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "fas fa-robot"
   }), " Robots"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+<<<<<<< HEAD
     to: "/analytics",
     className: "list-group-item list-group-item-action bg-light second-text fw-bold"
+=======
+    to: "/assigneds",
+    className: "list-group-item list-group-item-action bg-transparent second-text fw-bold"
+>>>>>>> main
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "fas fa-tasks"
   }), "Assigned")));
 };
 
 module.exports = Sidebar;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"react/components/Title.js":[function(require,module,exports) {
-"use strict";
-
-var _react = _interopRequireWildcard(require("react"));
-
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-// import {Link} from 'react-router-dom';
-var Title = function Title(props) {
-  var _useState = (0, _react.useState)("Dash"),
-      _useState2 = _slicedToArray(_useState, 2),
-      Title = _useState2[0],
-      setTitle = _useState2[1];
-
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", {
-    id: "main",
-    class: "fs-2 m-0"
-  }, Title));
-};
-
-module.exports = Title;
-},{"react":"../node_modules/react/index.js"}],"react/components/Robots.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"react/components/Robots.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireWildcard(require("react"));
@@ -34520,8 +34490,7 @@ var Robots = function Robots(props) {
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "All Robots:"), /*#__PURE__*/_react.default.createElement("table", {
     class: "table bg-white rounded shadow-sm  table-hover"
   }, /*#__PURE__*/_react.default.createElement("thead", null, /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", {
-    scope: "col",
-    width: "50"
+    scope: "col"
   }, "#"), /*#__PURE__*/_react.default.createElement("th", {
     scope: "col"
   }, "Robot Name"), /*#__PURE__*/_react.default.createElement("th", {
@@ -34549,8 +34518,7 @@ var Warehouses = function Warehouses(props) {
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Warehouses:"), /*#__PURE__*/_react.default.createElement("table", {
     class: "table bg-white rounded shadow-sm  table-hover"
   }, /*#__PURE__*/_react.default.createElement("thead", null, /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", {
-    scope: "col",
-    width: "50"
+    scope: "col"
   }, "#"), /*#__PURE__*/_react.default.createElement("th", {
     scope: "col"
   }, "Warehouse Name"), /*#__PURE__*/_react.default.createElement("th", {
@@ -34567,7 +34535,127 @@ var Warehouses = function Warehouses(props) {
 };
 
 module.exports = Warehouses;
-},{"react":"../node_modules/react/index.js"}],"react/components/App.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js"}],"react/components/form.js":[function(require,module,exports) {
+"use strict";
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var Form = function Form(props) {
+  // const [assi, setAssi]  = useState("NULL") 
+  return /*#__PURE__*/_react.default.createElement("div", null);
+};
+
+module.exports = Form;
+},{"react":"../node_modules/react/index.js"}],"react/components/Assigned.js":[function(require,module,exports) {
+"use strict";
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _form = _interopRequireDefault(require("./form"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var Assigneds = function Assigneds(props) {
+  var _useState = (0, _react.useState)("NULL"),
+      _useState2 = _slicedToArray(_useState, 2),
+      assi = _useState2[0],
+      setAssi = _useState2[1];
+
+  function change(e) {
+    props.warehouses.map(function (warehouse, i) {
+      var x = warehouse.id;
+      var y = e.target.value;
+      console.log("000000000000", x);
+      console.log("000000000000", y);
+
+      if (x == y) {
+        console.log("000000000000", e.target.value);
+        setAssi(warehouse.name);
+      }
+    });
+  } // props.assigneds[0].WarehouseId = 1
+
+
+  function checkRobot(params) {
+    console.log("000000000000", params);
+    props.robots.map(function (Robot, i) {
+      console.log("1111111111111111111", Robot.name);
+
+      if (Robot.name == params) {
+        props.assigneds.forEach(function (element) {
+          console.log("2222222222222222", Robot.id);
+          console.log("3333333333333333333", element.RobotId);
+
+          if (Robot.id == element.RobotId) {
+            console.log("44444444444444", element.WarehouseId);
+
+            if (element.WarehouseId == null) {
+              console.log("8888888888888888");
+              setAssi(params);
+            } else {
+              props.warehouses.map(function (Warehouse, j) {
+                if (Warehouse.id == element.WarehouseId) {
+                  console.log("99999999999999", Warehouse.name);
+                  setAssi(Warehouse.name);
+                }
+              });
+            }
+          }
+        });
+      }
+    });
+  }
+
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Assigned:"), /*#__PURE__*/_react.default.createElement("table", {
+    class: "table bg-white rounded shadow-sm  table-hover"
+  }, /*#__PURE__*/_react.default.createElement("thead", null, /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", {
+    scope: "col"
+  }, "Robots Name"), /*#__PURE__*/_react.default.createElement("th", {
+    scope: "col"
+  }, "Warehouse Assigned to"), /*#__PURE__*/_react.default.createElement("th", {
+    scope: "col"
+  }, "Start Date"), /*#__PURE__*/_react.default.createElement("th", {
+    scope: "col"
+  }, "End Date"))), props.assigneds.map(function (Assigned, i) {
+    return /*#__PURE__*/_react.default.createElement("tbody", null, /*#__PURE__*/_react.default.createElement("tr", {
+      key: i
+    }, /*#__PURE__*/_react.default.createElement("th", {
+      scope: "row"
+    }, props.robots[i].name), /*#__PURE__*/_react.default.createElement("td", null, " ", assi, " ", /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("label", null, "Select the warehouse"), /*#__PURE__*/_react.default.createElement("select", {
+      onChange: change
+    }, /*#__PURE__*/_react.default.createElement("option", null), props.warehouses.map(function (warehouse, i) {
+      return /*#__PURE__*/_react.default.createElement("option", {
+        key: i,
+        value: i
+      }, warehouse.name);
+    }))), /*#__PURE__*/_react.default.createElement("button", {
+      type: "submit"
+    }, "Submit Order")))), /*#__PURE__*/_react.default.createElement("td", null, Assigned.startDate), /*#__PURE__*/_react.default.createElement("td", null, Assigned.endDate)));
+  })));
+};
+
+module.exports = Assigneds;
+},{"react":"../node_modules/react/index.js","./form":"react/components/form.js"}],"react/components/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34581,11 +34669,11 @@ var _reactRouterDom = require("react-router-dom");
 
 var _Sidebar = _interopRequireDefault(require("./Sidebar"));
 
-var _Title = _interopRequireDefault(require("./Title"));
-
 var _Robots = _interopRequireDefault(require("./Robots"));
 
 var _Warehouses = _interopRequireDefault(require("./Warehouses"));
+
+var _Assigned = _interopRequireDefault(require("./Assigned"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34836,11 +34924,17 @@ var App = function App() {
     path: "/warehouses"
   }, /*#__PURE__*/_react.default.createElement(_Warehouses.default, {
     warehouses: warehouses
+  })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    path: "/assigneds"
+  }, /*#__PURE__*/_react.default.createElement(_Assigned.default, {
+    warehouses: warehouses,
+    assigneds: assigneds,
+    robots: robots
   }))))))));
 };
 
 exports.App = App;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./Sidebar":"react/components/Sidebar.js","./Title":"react/components/Title.js","./Robots":"react/components/Robots.js","./Warehouses":"react/components/Warehouses.js"}],"react/index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./Sidebar":"react/components/Sidebar.js","./Robots":"react/components/Robots.js","./Warehouses":"react/components/Warehouses.js","./Assigned":"react/components/Assigned.js"}],"react/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -34855,7 +34949,12 @@ var _App = require("./components/App");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+<<<<<<< HEAD
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(_reactRouterDom.HashRouter, null, /*#__PURE__*/_react.default.createElement(_App.App, null)), document.getElementById('root'));
+=======
+_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_reactRouterDom.HashRouter, null, /*#__PURE__*/_react.default.createElement(_App.App, null)), document.getElementById('root') //to thi
+);
+>>>>>>> main
 },{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","regenerator-runtime/runtime":"../node_modules/regenerator-runtime/runtime.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./components/App":"react/components/App.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -34884,7 +34983,11 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
+<<<<<<< HEAD
   var ws = new WebSocket(protocol + '://' + hostname + ':' + "55210" + '/');
+=======
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54274" + '/');
+>>>>>>> main
 
   ws.onmessage = function (event) {
     checkedAssets = {};

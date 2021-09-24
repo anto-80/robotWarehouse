@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import {Link , Route} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import Sidebar from './Sidebar';
-import Title from './Title';
 import Robots from './Robots';
 import Warehouses from './Warehouses';
+import Assigned from './Assigned';
+
 
 
 
@@ -121,14 +122,28 @@ export const App = () => {
 
                         <div class="row my-5">
                             <h3 class="fs-4 mb-3"></h3>
-                            <div class="col">
-                                <Route path="/robots">
-                                    <Robots robots={robots} />
-                                </Route>
-                                <Route path="/warehouses">
-                                    <Warehouses warehouses={warehouses} />
-                                </Route>
-                            </div>
+
+                            
+                            
+			
+			 
+    
+				  <div class="col">
+                  <Route path="/robots">
+				     <Robots robots={robots} />
+			      </Route> 
+                  <Route path="/warehouses">
+                     <Warehouses warehouses={warehouses} />
+                  </Route>
+                  <Route path="/assigneds">
+                     <Assigned warehouses={warehouses} assigneds={assigneds} robots={robots} />
+                  </Route>
+                            
+                               
+                            </div> 
+		
+			 
+                           
                         </div>
                     </div>
                 </div>
