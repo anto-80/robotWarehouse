@@ -11,7 +11,7 @@ const Warehouses = (props) => {
             
             <thead>
                                         <tr>
-                                            <th scope="col" width="50">#</th>
+                                            <th scope="col">#</th>
                                             <th scope="col">Warehouse Name</th>
                                             <th scope="col">Size</th>
                                             <th scope="col">Location</th>

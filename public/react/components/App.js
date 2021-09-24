@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import {Link , Route} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import Sidebar from './Sidebar';
-import Title from './Title';
 import Robots from './Robots';
 import Warehouses from './Warehouses';
+import Assigned from './Assigned';
+
 
 
 
@@ -157,6 +158,9 @@ export const App = () => {
 			      </Route> 
                   <Route path="/warehouses">
                      <Warehouses warehouses={warehouses} />
+                  </Route>
+                  <Route path="/assigneds">
+                     <Assigned warehouses={warehouses} assigneds={assigneds} robots={robots} />
                   </Route>
                             
                                
