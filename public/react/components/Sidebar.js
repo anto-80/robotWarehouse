@@ -25,7 +25,7 @@ import {Link} from 'react-router-dom';
         <i className="fas fa-robot" /> Robots
         </Link>
 
-        <Link to="/analytics" className="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+        <Link to="/assigneds" className="list-group-item list-group-item-action bg-transparent second-text fw-bold">
         <i className="fas fa-tasks" />Assigned
         </Link>
         </div>
