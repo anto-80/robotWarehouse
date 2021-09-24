@@ -34440,7 +34440,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 
 var Sidebar = function Sidebar(props) {
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "bg-white",
+    className: "bg-light",
     id: "sidebar-wrapper"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"
@@ -34450,22 +34450,22 @@ var Sidebar = function Sidebar(props) {
     className: "list-group list-group-flush my-3"
   }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/",
-    className: "list-group-item list-group-item-action bg-transparent second-text fw-bold"
+    className: "list-group-item list-group-item-action bg-light second-text fw-bold"
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "fas fa-tachometer-alt me-2"
   }), "Dashboard"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/warehouses",
-    className: "list-group-item list-group-item-action bg-transparent second-text fw-bold "
+    className: "list-group-item list-group-item-action bg-light second-text fw-bold "
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "fas fa-warehouse"
   }), " Warehouses"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/robots",
-    className: "list-group-item list-group-item-action bg-transparent second-text fw-bold"
+    className: "list-group-item list-group-item-action bg-light second-text fw-bold"
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "fas fa-robot"
   }), " Robots"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/analytics",
-    className: "list-group-item list-group-item-action bg-transparent second-text fw-bold"
+    className: "list-group-item list-group-item-action bg-light second-text fw-bold"
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "fas fa-tasks"
   }), "Assigned")));
@@ -34769,13 +34769,13 @@ var App = function App() {
     class: "collapse",
     id: "navbarToggleExternalContent"
   }, /*#__PURE__*/_react.default.createElement("div", {
-    class: "bg-dark p-4"
+    class: "bg-transparent p-4"
   }, /*#__PURE__*/_react.default.createElement("h5", {
     class: "text-white h4"
   }, "Collapsed content"), /*#__PURE__*/_react.default.createElement("span", {
     class: "text-muted"
   }, "Toggleable via the navbar brand."))), /*#__PURE__*/_react.default.createElement("nav", {
-    class: "navbar navbar-dark bg-dark"
+    class: "navbar navbar-light bg-transparent"
   }, /*#__PURE__*/_react.default.createElement("div", {
     class: "container-fluid"
   }, /*#__PURE__*/_react.default.createElement("button", {
@@ -34855,8 +34855,7 @@ var _App = require("./components/App");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_reactRouterDom.HashRouter, null, /*#__PURE__*/_react.default.createElement(_App.App, null), " //glue this"), document.getElementById('root') //to thi
-);
+_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_reactRouterDom.HashRouter, null, /*#__PURE__*/_react.default.createElement(_App.App, null)), document.getElementById('root'));
 },{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","regenerator-runtime/runtime":"../node_modules/regenerator-runtime/runtime.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./components/App":"react/components/App.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -34885,7 +34884,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52326" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55210" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

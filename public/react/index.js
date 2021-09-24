@@ -6,7 +6,7 @@ import  { App } from './components/App';
 
 ReactDOM.render(
 	<Router>
-	< App /> //glue this
+	< App /> 
 	 </Router>,
-	document.getElementById('root') //to thi
+	document.getElementById('root') 
 );

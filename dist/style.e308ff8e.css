@@ -100,7 +100,7 @@ h1 {
 }
 
 .list-group-item.active {
-  background-color: transparent;
+  background-color: white;
   color: var(--main-text-color);
   font-weight: bold;
   border: none;
@@ -120,7 +120,7 @@ h1 {
     margin-left: -15rem;
   }
 
-
+}
   @media (min-width: 457px) {
     #sidebar-wrapper {
       margin-left: 0;
@@ -134,7 +134,7 @@ h1 {
     #wrapper.toggled #sidebar-wrapper {
       margin-left: -10 rem;
     }
-}
 
+  }
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */

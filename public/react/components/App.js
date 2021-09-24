@@ -62,51 +62,29 @@ export const App = () => {
 
 
 
-		<div>
-			
-					
+        <div>
 
-            	
-				
+            <div class="d-flex" id="wrapper">
 
-			<div class="d-flex" id="wrapper">
-                
-               <Sidebar />
-               
-             
-        
-               
+                <Sidebar />
                 <div id="page-content-wrapper">
 
                     <div class="collapse" id="navbarToggleExternalContent">
-                        <div class="bg-dark p-4">
+                        <div class="bg-transparent p-4">
                             <h5 class="text-white h4">Collapsed content</h5>
                             <span class="text-muted">Toggleable via the navbar brand.</span>
                         </div>
                     </div>
-                    <nav class="navbar navbar-dark bg-dark">
+                    <nav class="navbar navbar-light bg-transparent">
                         <div class="container-fluid">
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                         </div>
                     </nav>
-                  
-                    {/* <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
-                        <div class="d-flex align-items-center">
-                            <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
-                            <Title/>
-                        </div>
-        
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-        
-                       
-                    </nav> */}
-        
+
+
+
                     <div class="container-fluid px-4">
                         <div class="row g-3 my-2">
                             <div class="col-md-4">
@@ -118,7 +96,7 @@ export const App = () => {
                                     <i class="fas fa-robot fs-1 primary-text border rounded-full secondary-bg p-3"></i>
                                 </div>
                             </div>
-        
+
                             <div class="col-md-4">
                                 <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                                     <div>
@@ -139,37 +117,23 @@ export const App = () => {
                                     <i class="fas fa-warehouse fs-1 primary-text border rounded-full secondary-bg p-3"></i>
                                 </div>
                             </div>
-        
-                            
                         </div>
-        
+
                         <div class="row my-5">
                             <h3 class="fs-4 mb-3"></h3>
-
-                            
-                            
-			
-			 
-    
-				  <div class="col">
-                  <Route path="/robots">
-				     <Robots robots={robots} />
-			      </Route> 
-                  <Route path="/warehouses">
-                     <Warehouses warehouses={warehouses} />
-                  </Route>
-                            
-                               
-                            </div> 
-		
-			 
-                           
+                            <div class="col">
+                                <Route path="/robots">
+                                    <Robots robots={robots} />
+                                </Route>
+                                <Route path="/warehouses">
+                                    <Warehouses warehouses={warehouses} />
+                                </Route>
+                            </div>
                         </div>
-        
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
 
             
 		
