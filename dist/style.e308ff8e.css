@@ -100,7 +100,7 @@ h1 {
 }
 
 .list-group-item.active {
-  background-color: transparent;
+  background-color: white;
   color: var(--main-text-color);
   font-weight: bold;
   border: none;
@@ -136,6 +136,8 @@ h1 {
     }
 
   }
+<<<<<<< HEAD
+=======
   .popup {
     position: relative;
     display: inline-block;
@@ -187,5 +189,6 @@ h1 {
     from {opacity: 0;}
     to {opacity:1 ;}
   }
+>>>>>>> main
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */

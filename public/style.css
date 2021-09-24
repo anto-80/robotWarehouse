@@ -100,7 +100,7 @@ h1 {
 }
 
 .list-group-item.active {
-  background-color: transparent;
+  background-color: white;
   color: var(--main-text-color);
   font-weight: bold;
   border: none;

@@ -8,5 +8,5 @@ ReactDOM.render(
 	<Router>
 	< App />
 	 </Router>,
-	document.getElementById('root') //to thi
+	document.getElementById('root') 
 );
